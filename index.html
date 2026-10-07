@@ -3,1909 +3,756 @@
 
 <head>
   <meta charset="UTF-8" />
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>🤡یه دعوت دلقکانه✨</title>
 
-
   <style>
-
     * {
       box-sizing: border-box;
-
       margin: 0;
       padding: 0;
-
-      font-family:
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        'Segoe UI',
-        Roboto,
-        sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
 
-
     body {
-
-      background:
-        radial-gradient(
-          circle at top,
-          #1e1b4b,
-          #0f172a
-        );
-
+      background: radial-gradient(circle at top, #1e1b4b, #0f172a);
       min-height: 100vh;
-
       display: flex;
-
       justify-content: center;
       align-items: center;
-
       color: #f8fafc;
-
       padding: 20px;
     }
 
-
     .card {
-
-      background:
-        rgba(255, 255, 255, 0.07);
-
-      backdrop-filter:
-        blur(16px);
-
-      -webkit-backdrop-filter:
-        blur(16px);
-
-      border:
-        1px solid
-        rgba(255, 255, 255, 0.15);
-
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
       border-radius: 24px;
-
       padding: 35px 25px;
-
       max-width: 450px;
-
       width: 100%;
-
       text-align: center;
-
-      box-shadow:
-        0 25px 50px -12px
-        rgba(0, 0, 0, 0.5);
-
-      animation:
-        cardIn 0.4s ease;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      animation: cardIn 0.4s ease;
     }
-
 
     @keyframes cardIn {
-
       from {
-
         opacity: 0;
-
-        transform:
-          translateY(15px)
-          scale(0.98);
-
+        transform: translateY(15px) scale(0.98);
       }
-
       to {
-
         opacity: 1;
-
-        transform:
-          translateY(0)
-          scale(1);
-
+        transform: translateY(0) scale(1);
       }
-
     }
-
 
     .icon {
-
       font-size: 3.2rem;
-
       margin-bottom: 12px;
-
       display: inline-block;
-
     }
-
 
     h2 {
-
       font-size: 1.35rem;
-
       margin-bottom: 22px;
-
       line-height: 1.6;
-
       font-weight: 600;
-
     }
-
 
     p {
-
       color: #cbd5e1;
-
       line-height: 1.8;
-
     }
-
 
     .buttons {
-
       display: flex;
-
       gap: 12px;
-
       justify-content: center;
-
     }
-
 
     button {
-
       padding: 13px 22px;
-
       font-size: 1rem;
-
       font-weight: 600;
-
       border: none;
-
       border-radius: 14px;
-
       cursor: pointer;
-
-      transition:
-        all 0.2s ease;
+      transition: all 0.2s ease;
     }
-
 
     button:active {
-
-      transform:
-        scale(0.97);
-
+      transform: scale(0.97);
     }
-
 
     .btn-yes {
-
       background: #10b981;
-
       color: white;
-
-      box-shadow:
-        0 4px 15px
-        rgba(16, 185, 129, 0.35);
-
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35);
       flex: 1;
-
     }
-
 
     .btn-yes:hover {
-
       background: #059669;
-
     }
-
 
     .btn-no {
-
       background: #ef4444;
-
       color: white;
-
-      box-shadow:
-        0 4px 15px
-        rgba(239, 68, 68, 0.35);
-
+      box-shadow: 0 4px 15px rgba(239, 68, 68, 0.35);
       flex: 1;
-
     }
-
 
     .btn-no:hover {
-
       background: #dc2626;
-
     }
-
 
     .option-list {
-
       display: flex;
-
       flex-direction: column;
-
       gap: 10px;
-
       width: 100%;
-
       margin-bottom: 18px;
-
       text-align: right;
-
     }
-
 
     .option-card {
-
-      background:
-        rgba(255, 255, 255, 0.05);
-
-      border:
-        1.5px solid
-        rgba(255, 255, 255, 0.15);
-
+      background: rgba(255, 255, 255, 0.05);
+      border: 1.5px solid rgba(255, 255, 255, 0.15);
       border-radius: 14px;
-
       padding: 14px 16px;
-
       cursor: pointer;
-
       display: flex;
-
       justify-content: space-between;
-
       align-items: center;
-
-      transition:
-        all 0.2s ease;
-
+      transition: all 0.2s ease;
       width: 100%;
-
       text-align: right;
-
       color: white;
-
     }
-
 
     .option-card:hover {
-
-      background:
-        rgba(255, 255, 255, 0.12);
-
-      border-color:
-        rgba(255, 255, 255, 0.3);
-
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.3);
     }
-
 
     .option-card.selected {
-
-      background:
-        rgba(99, 102, 241, 0.25);
-
-      border-color:
-        #818cf8;
-
-      box-shadow:
-        0 0 12px
-        rgba(129, 140, 248, 0.3);
-
+      background: rgba(99, 102, 241, 0.25);
+      border-color: #818cf8;
+      box-shadow: 0 0 12px rgba(129, 140, 248, 0.3);
     }
-
 
     .option-title {
-
       font-weight: 600;
-
       color: #f1f5f9;
-
       font-size: 0.95rem;
-
       display: block;
-
     }
-
 
     .option-date {
-
       font-size: 0.8rem;
-
       color: #94a3b8;
-
       margin-top: 4px;
-
       display: block;
-
     }
-
 
     .phone-container {
-
       margin-bottom: 18px;
-
       text-align: right;
-
     }
-
 
     .phone-container label {
-
       display: block;
-
       font-size: 0.85rem;
-
       margin-bottom: 6px;
-
       color: #cbd5e1;
-
     }
-
 
     .phone-input {
-
       width: 100%;
-
       padding: 12px 16px;
-
-      background:
-        rgba(255, 255, 255, 0.08);
-
-      border:
-        1.5px solid
-        rgba(255, 255, 255, 0.2);
-
+      background: rgba(255, 255, 255, 0.08);
+      border: 1.5px solid rgba(255, 255, 255, 0.2);
       border-radius: 12px;
-
       color: white;
-
       font-size: 1rem;
-
       direction: ltr;
-
       text-align: center;
-
       letter-spacing: 1.5px;
-
       outline: none;
-
-      transition:
-        border-color 0.2s ease;
-
+      transition: border-color 0.2s ease;
     }
-
 
     .phone-input:focus {
-
-      border-color:
-        #818cf8;
-
-      background:
-        rgba(255, 255, 255, 0.12);
-
+      border-color: #818cf8;
+      background: rgba(255, 255, 255, 0.12);
     }
-
 
     .phone-input::placeholder {
-
       color: #64748b;
-
       letter-spacing: normal;
-
     }
-
 
     .btn-submit {
-
       background: #6366f1;
-
       color: white;
-
       width: 100%;
-
-      box-shadow:
-        0 4px 15px
-        rgba(99, 102, 241, 0.4);
-
+      box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
     }
-
 
     .btn-submit:hover {
-
       background: #4f46e5;
-
     }
-
 
     .btn-submit:disabled {
-
       background: #334155;
-
       cursor: not-allowed;
-
       box-shadow: none;
-
       opacity: 0.6;
-
     }
-
 
     .back-btn {
-
       background: transparent;
-
       color: #94a3b8;
-
       margin-top: 12px;
-
       font-size: 0.85rem;
-
       padding: 8px 15px;
-
     }
-
 
     .back-btn:hover {
-
       color: white;
-
     }
-
 
     .success {
-
       font-size: 3.5rem;
-
       margin-bottom: 10px;
-
     }
-
   </style>
-
 </head>
-
 
 <body>
 
-
-  <div
-    class="card"
-    id="appCard"
-    role="status"
-    aria-live="polite"
-    aria-atomic="true"
-  ></div>
-
-
+  <div class="card" id="appCard" role="status" aria-live="polite" aria-atomic="true"></div>
 
   <script>
-
-
     /*
     ==========================================
     FORMSpree
     ==========================================
     */
-
-    const FORMSPREE_ENDPOINT =
-      "https://formspree.io/f/mnpjjgpd";
-
-
-    const FORMSPREE_TIMEOUT =
-      10000;
-
-
+    const FORMSPREE_ENDPOINT = "https://formspree.io/f/mnpjjgpd";
+    const FORMSPREE_TIMEOUT = 10000;
     let isSubmitting = false;
-
-
     let lastSubmissionError = "";
-
-
 
     /*
     ==========================================
     جواب‌های کاربر
     ==========================================
     */
-
     const userAnswers = {
-
       single: "",
-
       theaterInvitation: "",
-
       show: "",
-
       date: "",
-
+      cafeOffer: "", // آیا کافه رو قبول کرد یا نه
       phone: "",
-
       timestamp: ""
-
     };
-
-
 
     /*
     ==========================================
     نمایش‌ها
     ==========================================
-    
-    هر نمایش می‌تواند
-    تاریخ و ساعت مخصوص خودش
-    را داشته باشد.
     */
-
     const theaterOptions = [
-
       {
-
         id: 1,
-
-        title:
-          "نمایش کمدی «اتاقی در هتل کالیفرنیا»",
-
-        description:
-          "هیچ ایده ای ندارم چطوریههه🤷‍♂️🤷‍♂️",
-
+        title: "نمایش کمدی «اتاقی در هتل کالیفرنیا»",
+        description: "هیچ ایده ای ندارم چطوریههه🤷‍♂️🤷‍♂️",
         dates: [
-
-          {
-            date: "پنج‌شنبه 23 مهر",
-            time: "19:00"
-          },
-
-          {
-            date: "جمعه 24 مهر",
-            time: "19:00"
-          },
-
-          {
-            date: "شنبه ۲۲ مهر",
-            time: "۱۸:۰۰"
-          }
-
+          { date: "سه شنبه 21 مهر", time: "19:00" },
+          { date: "چهارشنبه 22 مهر", time: "19:00" },
+          { date: "پنج‌شنبه 23 مهر", time: "19:00" },
+          { date: "جمعه 24 مهر", time: "19:00" }
         ]
-
       },
-
-
       {
-
         id: 2,
-
-        title:
-          "تئاتر نمایش مرگ یزدگرد",
-
-        description:
-          "به نظرم جالب باشه",
-
-        dates: [
-
-          {
-            date: "شنبه ۲۲ مهر",
-            time: "۱۸:۰۰"
-          },
-
-          {
-            date: "دوشنبه ۲۴ مهر",
-            time: "۲۰:۳۰"
-          }
-
-        ]
-
+        title: "تئاتر نمایش مرگ یزدگرد",
+        description: "به نظرم جالب باشه، ولی تا این لحظه تاریخ سانس هاشو معلوم نکردن",
+        dates: [] // سانس‌ها نامعلوم
       },
-
-
       {
-
         id: 3,
-
-        title:
-          "نمایش دوره گردها <<عمو فیتیله ای ها>>",
-
-        description:
-          "این ساری نیست، بهشهره🥴",
-
+        title: "نمایش دوره گردها <<عمو فیتیله ای ها>>",
+        description: "این ساری نیست، بهشهره🥴",
         dates: [
-
-          {
-            date: "پنج‌شنبه ۲۷ مهر",
-            time: "۲۰:۳۰"
-          },
-
-          {
-            date: "جمعه ۲۸ مهر",
-            time: "۱۹:۰۰"
-          },
-
-          {
-            date: "شنبه ۲۹ مهر",
-            time: "۲۱:۰۰"
-          }
-
+          { date: "دوشنبه 20 مهر", time: "18:00" },
+          { date: "سه شنبه 21 مهر", time: "18:00" }
         ]
-
       }
-
     ];
 
-
-
-    /*
-    ==========================================
-    متغیرهای انتخاب
-    ==========================================
-    */
+    // گزینه‌های روز کافه (در صورت انتخاب مرگ یزدگرد و پاسخ مثبت)
+    const cafeDays = [
+      { day: "یکشنبه", time: "هر ساعتی بعد 17:00" },
+      { day: "دوشنبه", time: "هر ساعتی بعد 17:00" },
+      { day: "پنجشنبه", time: "هر ساعتی بعد 17:00" },
+      { day: "حرف بزنیم <<خواهیم دید چه خواهد شد>>", time: "با هم درستش میکنیم" }
+    ];
 
     let selectedShow = null;
-
     let selectedDate = null;
 
-
-
     /*
     ==========================================
-    مرحله اول
+    مرحله اول: سینگلی؟
     ==========================================
     */
-
     function showStep1() {
-
-      const card =
-        document.getElementById(
-          "appCard"
-        );
-
-
+      const card = document.getElementById("appCard");
       card.innerHTML = `
-
-        <span
-          class="icon"
-          aria-hidden="true"
-        >
-          👀
-        </span>
-
-
-        <h2>
-
-          اول یه سؤال مهم...
-
-          <br>
-
-          سینگلی؟
-
-        </h2>
-
-
+        <span class="icon" aria-hidden="true">👀</span>
+        <h2>اول یه سؤال مهم...<br>سینگلی؟</h2>
         <div class="buttons">
-
-
-          <button
-            type="button"
-            class="btn-yes"
-            onclick="handleStep1(true)"
-          >
-            آره، سینگلم 😌
-          </button>
-
-
-          <button
-            type="button"
-            class="btn-no"
-            onclick="handleStep1(false)"
-          >
-            نه، رلم دارم 😅
-          </button>
-
-
+          <button type="button" class="btn-yes" onclick="handleStep1(true)">آره، سینگلم 😌</button>
+          <button type="button" class="btn-no" onclick="handleStep1(false)">نه، رلم دارم 😅</button>
         </div>
-
       `;
-
     }
 
-
-
-    /*
-    ==========================================
-    جواب سؤال اول
-    ==========================================
-    */
-
-    function handleStep1(
-      isSingle
-    ) {
-
-      userAnswers.single =
-        isSingle
-          ? "بله، سینگل است"
-          : "خیر، متعهد است";
-
-
+    function handleStep1(isSingle) {
+      userAnswers.single = isSingle ? "بله، سینگل است" : "خیر، متعهد است";
       if (isSingle) {
-
         showStep2();
-
-      }
-
-      else {
-
-        showRejected(
-          "💔",
-          "ای بابا! پس هیچی دیگه!برو پیش پارتنرت، خوش بگذره 😂"
-        );
-
-
+      } else {
+        showRejected("💔", "ای بابا! پس هیچی دیگه! برو پیش پارتنرت، خوش بگذره 😂");
         sendAnswers();
-
       }
-
     }
-
-
 
     /*
     ==========================================
-    سؤال دوم
+    مرحله دوم: تئاتر میای؟
     ==========================================
     */
-
     function showStep2() {
-
-      const card =
-        document.getElementById(
-          "appCard"
-        );
-
-
+      const card = document.getElementById("appCard");
       card.innerHTML = `
-
-        <span
-          class="icon"
-          aria-hidden="true"
-        >
-          🎭
-        </span>
-
-
-        <h2>
-
-          حالا که سینگلی...
-
-          <br>
-
-          باهام به یه تئاتر یا نمایش میای؟
-
-        </h2>
-
-
+        <span class="icon" aria-hidden="true">🎭</span>
+        <h2>حالا که سینگلی...<br>باهام به یه تئاتر یا نمایش میای؟</h2>
         <div class="buttons">
-
-
-          <button
-            type="button"
-            class="btn-yes"
-            onclick="handleStep2(true)"
-          >
-            آره 😍
-          </button>
-
-
-          <button
-            type="button"
-            class="btn-no"
-            onclick="handleStep2(false)"
-          >
-            نه 🥲
-          </button>
-
-
+          <button type="button" class="btn-yes" onclick="handleStep2(true)">آره 😍</button>
+          <button type="button" class="btn-no" onclick="handleStep2(false)">نه 🥲</button>
         </div>
-
       `;
-
     }
 
-
-
-    /*
-    ==========================================
-    جواب سؤال دوم
-    ==========================================
-    */
-
-    function handleStep2(
-      wantsToCome
-    ) {
-
-      userAnswers.theaterInvitation =
-        wantsToCome
-          ? "بله، می‌آید"
-          : "خیر، رد کرد";
-
-
+    function handleStep2(wantsToCome) {
+      userAnswers.theaterInvitation = wantsToCome ? "بله، می‌آید" : "خیر، رد کرد";
       if (wantsToCome) {
-
         showShows();
-
-      }
-
-      else {
-
-        showRejected(
-          "🥲",
-          "حیف شد! شاید یه وقت دیگه ✨"
-        );
-
-
+      } else {
+        showRejected("🥲", "حیف شد! شاید یه وقت دیگه ✨");
         sendAnswers();
-
       }
-
     }
-
-
 
     /*
     ==========================================
-    نمایش لیست تئاترها
+    مرحله سوم: انتخاب نمایش
     ==========================================
     */
-
     function showShows() {
-
-      const card =
-        document.getElementById(
-          "appCard"
-        );
-
-
+      const card = document.getElementById("appCard");
       let html = "";
 
-
-      theaterOptions.forEach(
-        option => {
-
-          html += `
-
-            <button
-
-              type="button"
-
-              class="option-card"
-
-              id="show-${option.id}"
-
-              aria-pressed="false"
-
-              onclick="
-                selectShow(${option.id})
-              "
-
-            >
-
-              <span>
-
-
-                <span
-                  class="option-title"
-                >
-
-                  ${option.title}
-
-                </span>
-
-
-                <span
-                  class="option-date"
-                >
-
-                  ${option.description}
-
-                </span>
-
-
-              </span>
-
-
-              <span
-                aria-hidden="true"
-              >
-
-                🎭
-
-              </span>
-
-
-            </button>
-
-          `;
-
-        }
-      );
-
+      theaterOptions.forEach(option => {
+        html += `
+          <button
+            type="button"
+            class="option-card"
+            id="show-${option.id}"
+            aria-pressed="false"
+            onclick="selectShow(${option.id})"
+          >
+            <span>
+              <span class="option-title">${option.title}</span>
+              <span class="option-date">${option.description}</span>
+            </span>
+            <span aria-hidden="true">🎭</span>
+          </button>
+        `;
+      });
 
       card.innerHTML = `
-
-        <span
-          class="icon"
-          aria-hidden="true"
-        >
-          🎟️
-        </span>
-
-
-        <h2>
-
-          خب، کدوم نمایش رو انتخاب می‌کنی؟
-
-        </h2>
-
-
-        <div
-          class="option-list"
-          role="group"
-          aria-label="انتخاب نمایش"
-        >
-
+        <span class="icon" aria-hidden="true">🎟️</span>
+        <h2>خب، کدوم نمایش رو انتخاب می‌کنی؟</h2>
+        <div class="option-list" role="group" aria-label="انتخاب نمایش">
           ${html}
-
         </div>
-
       `;
-
     }
-
-
-
-    /*
-    ==========================================
-    انتخاب نمایش
-    ==========================================
-    */
 
     function selectShow(id) {
+      selectedShow = theaterOptions.find(option => option.id === id);
 
-      selectedShow =
-        theaterOptions.find(
-          option =>
-            option.id === id
-        );
+      document.querySelectorAll(".option-card").forEach(card => {
+        card.classList.remove("selected");
+        card.setAttribute("aria-pressed", "false");
+      });
 
+      const selectedCard = document.getElementById("show-" + id);
+      selectedCard.classList.add("selected");
+      selectedCard.setAttribute("aria-pressed", "true");
 
-      document
-        .querySelectorAll(
-          ".option-card"
-        )
-        .forEach(card => {
-
-          card.classList.remove(
-            "selected"
-          );
-
-
-          card.setAttribute(
-            "aria-pressed",
-            "false"
-          );
-
-        });
-
-
-      const selectedCard =
-        document.getElementById(
-          "show-" + id
-        );
-
-
-      selectedCard.classList.add(
-        "selected"
-      );
-
-
-      selectedCard.setAttribute(
-        "aria-pressed",
-        "true"
-      );
-
-
-      userAnswers.show =
-        selectedShow.title;
-
-
-      /*
-      بعد از انتخاب نمایش،
-      تاریخ‌های مخصوص همان نمایش
-      نمایش داده می‌شوند.
-      */
+      userAnswers.show = selectedShow.title;
 
       setTimeout(() => {
-
-        showDates();
-
+        // اگر نمایش مرگ یزدگرد بود، پیشنهاد کافه را بپرس
+        if (selectedShow.id === 2) {
+          showCafeOffer();
+        } else {
+          showDates();
+        }
       }, 250);
-
     }
-
-
 
     /*
     ==========================================
-    تاریخ‌های مخصوص نمایش انتخاب‌شده
+    پیشنهاد کافه برای مرگ یزدگرد
     ==========================================
     */
+    function showCafeOffer() {
+      const card = document.getElementById("appCard");
+      card.innerHTML = `
+        <span class="icon" aria-hidden="true">☕</span>
+        <h2>
+          حالا که تاریخ نمایش هنوز معلوم نیست...
+          <br>
+          یه شب همینجوری بریم بیرون کافه‌ای جایی؟ ☕🍰
+        </h2>
+        <div class="buttons">
+          <button type="button" class="btn-yes" onclick="handleCafeChoice(true)">آره بریم پایه ام 😍</button>
+          <button type="button" class="btn-no" onclick="handleCafeChoice(false)">نه همون تئاتر فقط 😅</button>
+        </div>
+      `;
+    }
 
-    function showDates() {
+    function handleCafeChoice(agreed) {
+      if (agreed) {
+        userAnswers.cafeOffer = "بله، موافق کافه بود";
+        showCafeDays();
+      } else {
+        userAnswers.cafeOffer = "خیر، ترجیح داد فقط منتظر تئاتر بماند";
+        userAnswers.date = "منتظر اعلام سانس رسمی تئاتر";
+        showPhone(); // مستقیماً برای گرفتن شماره می‌رود
+      }
+    }
 
-      const card =
-        document.getElementById(
-          "appCard"
-        );
-
-
+    /*
+    ==========================================
+    انتخاب روز کافه
+    ==========================================
+    */
+    function showCafeDays() {
+      const card = document.getElementById("appCard");
       let html = "";
 
-
-      selectedShow.dates.forEach(
-        (option, index) => {
-
-          html += `
-
-            <button
-
-              type="button"
-
-              class="option-card"
-
-              id="date-${index}"
-
-              aria-pressed="false"
-
-              onclick="
-                selectDate(${index})
-              "
-
-            >
-
-              <span>
-
-
-                <span
-                  class="option-title"
-                >
-
-                  ${option.date}
-
-                </span>
-
-
-                <span
-                  class="option-date"
-                >
-
-                  ⏰ ساعت ${option.time}
-
-                </span>
-
-
-              </span>
-
-
-              <span
-                aria-hidden="true"
-              >
-
-                📅
-
-              </span>
-
-
-            </button>
-
-          `;
-
-        }
-      );
-
+      cafeDays.forEach((opt, index) => {
+        html += `
+          <button
+            type="button"
+            class="option-card"
+            id="cafe-day-${index}"
+            aria-pressed="false"
+            onclick="selectCafeDay(${index})"
+          >
+            <span>
+              <span class="option-title">${opt.day}</span>
+              <span class="option-date">⏰ ساعت: ${opt.time}</span>
+            </span>
+            <span aria-hidden="true">✨</span>
+          </button>
+        `;
+      });
 
       card.innerHTML = `
+        <span class="icon" aria-hidden="true">🗓️</span>
+        <h2>چه زمانی برای کافه برات راحت‌تره؟</h2>
+        <div class="option-list" role="group" aria-label="انتخاب زمان کافه">
+          ${html}
+        </div>
+      `;
+    }
 
-        <span
-          class="icon"
-          aria-hidden="true"
-        >
-          📅
-        </span>
+    function selectCafeDay(index) {
+      const chosen = cafeDays[index];
+      userAnswers.date = `کافه - ${chosen.day} (ساعت ${chosen.time})`;
 
+      document.querySelectorAll(".option-card").forEach(card => {
+        card.classList.remove("selected");
+        card.setAttribute("aria-pressed", "false");
+      });
 
+      const selCard = document.getElementById("cafe-day-" + index);
+      selCard.classList.add("selected");
+      selCard.setAttribute("aria-pressed", "true");
+
+      setTimeout(() => {
+        showPhone();
+      }, 250);
+    }
+
+    /*
+    ==========================================
+    تاریخ‌های مخصوص سایر نمایش‌ها
+    ==========================================
+    */
+    function showDates() {
+      const card = document.getElementById("appCard");
+      let html = "";
+
+      selectedShow.dates.forEach((option, index) => {
+        html += `
+          <button
+            type="button"
+            class="option-card"
+            id="date-${index}"
+            aria-pressed="false"
+            onclick="selectDate(${index})"
+          >
+            <span>
+              <span class="option-title">${option.date}</span>
+              <span class="option-date">⏰ ساعت ${option.time}</span>
+            </span>
+            <span aria-hidden="true">📅</span>
+          </button>
+        `;
+      });
+
+      card.innerHTML = `
+        <span class="icon" aria-hidden="true">📅</span>
         <h2>
-
           برای
           <br>
           «${selectedShow.title}»
           <br>
           چه زمانی برات بهتره؟
-
         </h2>
-
-
-        <div
-          class="option-list"
-          role="group"
-          aria-label="انتخاب تاریخ"
-        >
-
+        <div class="option-list" role="group" aria-label="انتخاب تاریخ">
           ${html}
-
         </div>
-
       `;
-
     }
-
-
-
-    /*
-    ==========================================
-    انتخاب تاریخ
-    ==========================================
-    */
 
     function selectDate(index) {
+      selectedDate = selectedShow.dates[index];
 
-      selectedDate =
-        selectedShow.dates[index];
+      document.querySelectorAll(".option-card").forEach(card => {
+        card.classList.remove("selected");
+        card.setAttribute("aria-pressed", "false");
+      });
 
+      const selectedCard = document.getElementById("date-" + index);
+      selectedCard.classList.add("selected");
+      selectedCard.setAttribute("aria-pressed", "true");
 
-      document
-        .querySelectorAll(
-          ".option-card"
-        )
-        .forEach(card => {
-
-          card.classList.remove(
-            "selected"
-          );
-
-
-          card.setAttribute(
-            "aria-pressed",
-            "false"
-          );
-
-        });
-
-
-      const selectedCard =
-        document.getElementById(
-          "date-" + index
-        );
-
-
-      selectedCard.classList.add(
-        "selected"
-      );
-
-
-      selectedCard.setAttribute(
-        "aria-pressed",
-        "true"
-      );
-
-
-      userAnswers.date =
-        `${selectedDate.date} - ساعت ${selectedDate.time}`;
-
+      userAnswers.date = `${selectedDate.date} - ساعت ${selectedDate.time}`;
 
       setTimeout(() => {
-
         showPhone();
-
       }, 250);
-
     }
-
-
 
     /*
     ==========================================
     شماره تلفن
     ==========================================
     */
-
     function showPhone() {
-
-      const card =
-        document.getElementById(
-          "appCard"
-        );
-
-
+      const card = document.getElementById("appCard");
       card.innerHTML = `
-
-        <span
-          class="icon"
-          aria-hidden="true"
-        >
-          📱
-        </span>
-
-
+        <span class="icon" aria-hidden="true">📱</span>
         <h2>
-
           تقریباً تمومه 😌
-
           <br>
-
           شماره تماست رو بده تا هماهنگ کنیم
-
         </h2>
-
-
-        <div
-          class="phone-container"
-        >
-
-
-          <label
-            for="userPhone"
-          >
-
-            شماره موبایل
-
-          </label>
-
-
+        <div class="phone-container">
+          <label for="userPhone">شماره موبایل</label>
           <input
-
             type="tel"
-
             id="userPhone"
-
             class="phone-input"
-
             placeholder="0912xxxxxxx"
-
             maxlength="11"
-
             autocomplete="tel"
-
             inputmode="tel"
-
             oninput="validatePhone()"
-
           />
-
-
-          <p>
-
-            شماره‌ای ۱۱ رقمی که
-            با ۰۹ شروع می‌شود وارد کن.
-
-          </p>
-
-
+          <p>شماره‌ای ۱۱ رقمی که با ۰۹ شروع می‌شود وارد کن.</p>
         </div>
-
-
         <button
-
           type="button"
-
           class="btn-submit"
-
           id="submitBtn"
-
           disabled
-
           onclick="submitFinal()"
-
         >
-
           ثبت نهایی 🎉
-
         </button>
-
       `;
-
     }
-
-
-
-    /*
-    ==========================================
-    اعتبارسنجی شماره
-    ==========================================
-    */
 
     function validatePhone() {
-
-      const input =
-        document.getElementById(
-          "userPhone"
-        );
-
-
-      const button =
-        document.getElementById(
-          "submitBtn"
-        );
-
-
-      let phone =
-        input.value
-          .replace(/\D/g, "");
-
-
-      input.value =
-        phone;
-
-
-      const valid =
-        /^09\d{9}$/.test(
-          phone
-        );
-
-
-      button.disabled =
-        !valid;
-
+      const input = document.getElementById("userPhone");
+      const button = document.getElementById("submitBtn");
+      let phone = input.value.replace(/\D/g, "");
+      input.value = phone;
+      const valid = /^09\d{9}$/.test(phone);
+      button.disabled = !valid;
     }
-
-
-
-    /*
-    ==========================================
-    ثبت نهایی
-    ==========================================
-    */
 
     async function submitFinal() {
+      if (isSubmitting) return;
 
-      if (isSubmitting) {
+      const input = document.getElementById("userPhone");
+      const phone = input.value.trim();
 
+      if (!/^09\d{9}$/.test(phone)) {
+        showErrorMessage("شماره موبایل معتبر نیست.");
         return;
-
       }
 
-
-      const input =
-        document.getElementById(
-          "userPhone"
-        );
-
-
-      const phone =
-        input.value.trim();
-
-
-      if (
-        !/^09\d{9}$/.test(phone)
-      ) {
-
-        showErrorMessage(
-          "شماره موبایل معتبر نیست."
-        );
-
-        return;
-
-      }
-
-
-      userAnswers.phone =
-        phone;
-
-
-      userAnswers.timestamp =
-        new Date().toLocaleString(
-          "fa-IR"
-        );
-
+      userAnswers.phone = phone;
+      userAnswers.timestamp = new Date().toLocaleString("fa-IR");
 
       showLoading();
-
-
-      await sendAnswers(
-        true
-      );
-
+      await sendAnswers(true);
     }
-
-
 
     /*
     ==========================================
     ارسال به Formspree
     ==========================================
     */
+    async function sendAnswers(showSuccess = false) {
+      if (isSubmitting) return false;
 
-    async function sendAnswers(
-      showSuccess = false
-    ) {
-
-      if (isSubmitting) {
-
+      if (!FORMSPREE_ENDPOINT || FORMSPREE_ENDPOINT.includes("YOUR_FORM_ID")) {
+        const errorMessage = "آدرس Formspree هنوز تنظیم نشده است.";
+        console.error(errorMessage, userAnswers);
+        lastSubmissionError = errorMessage;
+        if (showSuccess) showErrorMessage(errorMessage);
         return false;
-
       }
 
-
-      if (
-        !FORMSPREE_ENDPOINT ||
-        FORMSPREE_ENDPOINT.includes(
-          "YOUR_FORM_ID"
-        )
-      ) {
-
-        const errorMessage =
-          "آدرس Formspree هنوز تنظیم نشده است.";
-
-
-        console.error(
-          errorMessage,
-          userAnswers
-        );
-
-
-        lastSubmissionError =
-          errorMessage;
-
-
-        if (showSuccess) {
-
-          showErrorMessage(
-            errorMessage
-          );
-
-        }
-
-
-        return false;
-
-      }
-
-
-      isSubmitting =
-        true;
-
-
-      const controller =
-        new AbortController();
-
-
-      const timeoutId =
-        setTimeout(
-          () => {
-
-            controller.abort();
-
-          },
-
-          FORMSPREE_TIMEOUT
-        );
-
+      isSubmitting = true;
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), FORMSPREE_TIMEOUT);
 
       try {
+        const response = await fetch(FORMSPREE_ENDPOINT, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body: JSON.stringify(userAnswers),
+          signal: controller.signal
+        });
 
-        const response =
-          await fetch(
-
-            FORMSPREE_ENDPOINT,
-
-            {
-
-              method: "POST",
-
-              headers: {
-
-                "Content-Type":
-                  "application/json",
-
-                "Accept":
-                  "application/json"
-
-              },
-
-              body:
-                JSON.stringify(
-                  userAnswers
-                ),
-
-              signal:
-                controller.signal
-
-            }
-
-          );
-
-
-        let responseData =
-          null;
-
-
+        let responseData = null;
         try {
-
-          responseData =
-            await response.json();
-
+          responseData = await response.json();
+        } catch (parseError) {
+          responseData = null;
         }
-
-        catch (parseError) {
-
-          responseData =
-            null;
-
-        }
-
 
         if (!response.ok) {
-
           const serverMessage =
+            responseData && responseData.errors && responseData.errors.length
+              ? responseData.errors.map(error => error.message).join("، ")
+              : responseData && responseData.error
+              ? responseData.error
+              : `خطای سرور (${response.status})`;
 
-            responseData &&
-            responseData.errors &&
-            responseData.errors.length
-
-              ?
-
-              responseData.errors
-                .map(
-                  error =>
-                    error.message
-                )
-                .join("، ")
-
-              :
-
-              responseData &&
-                responseData.error
-
-              ?
-
-              responseData.error
-
-              :
-
-              `خطای سرور (${response.status})`;
-
-
-          throw new Error(
-            serverMessage
-          );
-
+          throw new Error(serverMessage);
         }
 
-
-        lastSubmissionError =
-          "";
-
-
-        if (showSuccess) {
-
-          showSuccessMessage();
-
-        }
-
-
+        lastSubmissionError = "";
+        if (showSuccess) showSuccessMessage();
         return true;
-
-      }
-
-
-      catch (error) {
-
-        console.error(
-          "خطا در ارسال Formspree:",
-          error
-        );
-
-
-        if (
-          error.name ===
-          "AbortError"
-        ) {
-
-          lastSubmissionError =
-            "زمان ارسال تمام شد.";
-
+      } catch (error) {
+        console.error("خطا در ارسال Formspree:", error);
+        if (error.name === "AbortError") {
+          lastSubmissionError = "زمان ارسال تمام شد.";
+        } else if (error instanceof TypeError) {
+          lastSubmissionError = "خطای شبکه رخ داد.";
+        } else {
+          lastSubmissionError = error.message || "ارسال اطلاعات ناموفق بود.";
         }
 
-        else if (
-          error instanceof
-          TypeError
-        ) {
-
-          lastSubmissionError =
-            "خطای شبکه رخ داد.";
-
-        }
-
-        else {
-
-          lastSubmissionError =
-            error.message ||
-            "ارسال اطلاعات ناموفق بود.";
-
-        }
-
-
-        if (showSuccess) {
-
-          showErrorMessage(
-            lastSubmissionError
-          );
-
-        }
-
-
+        if (showSuccess) showErrorMessage(lastSubmissionError);
         return false;
-
+      } finally {
+        clearTimeout(timeoutId);
+        isSubmitting = false;
       }
-
-
-      finally {
-
-        clearTimeout(
-          timeoutId
-        );
-
-
-        isSubmitting =
-          false;
-
-      }
-
     }
-
-
-
-    /*
-    ==========================================
-    پیام موفقیت
-    ==========================================
-    */
 
     function showSuccessMessage() {
-
-      const card =
-        document.getElementById(
-          "appCard"
-        );
-
-
+      const card = document.getElementById("appCard");
       card.innerHTML = `
-
-        <div
-          class="success"
-          aria-hidden="true"
-        >
-          🥳
-        </div>
-
-
-        <h2>
-
-          عالی شد!
-
-        </h2>
-
-
+        <div class="success" aria-hidden="true">🥳</div>
+        <h2>عالی شد!</h2>
         <p>
-
           انتخابت ثبت شد ❤️
-
           <br>
-
-          به زودی برای هماهنگی
-          بهت پیام می‌دم.
-
+          به زودی برای هماهنگی بهت پیام می‌دم.
         </p>
-
       `;
-
     }
 
-
-
-    /*
-    ==========================================
-    خطای ارسال
-    ==========================================
-    */
-
-    function showErrorMessage(
-      message =
-        "ارسال اطلاعات ناموفق بود."
-    ) {
-
-      const card =
-        document.getElementById(
-          "appCard"
-        );
-
-
+    function showErrorMessage(message = "ارسال اطلاعات ناموفق بود.") {
+      const card = document.getElementById("appCard");
       card.innerHTML = `
-
-        <span
-          class="icon"
-          aria-hidden="true"
-        >
-          😬
-        </span>
-
-
-        <h2>
-
-          یه مشکلی پیش اومد!
-
-        </h2>
-
-
-        <p>
-
-          ${message}
-
-        </p>
-
-
-        <button
-
-          type="button"
-
-          class="btn-submit"
-
-          style="margin-top:20px"
-
-          onclick="retrySubmission()"
-
-        >
-
-          تلاش مجدد
-
-        </button>
-
-
-        <button
-
-          type="button"
-
-          class="back-btn"
-
-          onclick="showStep1()"
-
-        >
-
-          شروع دوباره
-
-        </button>
-
+        <span class="icon" aria-hidden="true">😬</span>
+        <h2>یه مشکلی پیش اومد!</h2>
+        <p>${message}</p>
+        <button type="button" class="btn-submit" style="margin-top:20px" onclick="retrySubmission()">تلاش مجدد</button>
+        <button type="button" class="back-btn" onclick="showStep1()">شروع دوباره</button>
       `;
-
     }
-
-
-
-    /*
-    ==========================================
-    تلاش مجدد
-    ==========================================
-    */
 
     async function retrySubmission() {
-
-      if (isSubmitting) {
-
-        return;
-
-      }
-
-
+      if (isSubmitting) return;
       showLoading();
-
-
-      await sendAnswers(
-        true
-      );
-
+      await sendAnswers(true);
     }
 
-
-
-    /*
-    ==========================================
-    جواب منفی
-    ==========================================
-    */
-
-    function showRejected(
-      icon,
-      message
-    ) {
-
-      const card =
-        document.getElementById(
-          "appCard"
-        );
-
-
+    function showRejected(icon, message) {
+      const card = document.getElementById("appCard");
       card.innerHTML = `
-
-        <span
-          class="icon"
-          aria-hidden="true"
-        >
-          ${icon}
-        </span>
-
-
-        <h2>
-
-          ${message}
-
-        </h2>
-
+        <span class="icon" aria-hidden="true">${icon}</span>
+        <h2>${message}</h2>
       `;
-
     }
-
-
-
-    /*
-    ==========================================
-    Loading
-    ==========================================
-    */
 
     function showLoading() {
-
-      const card =
-        document.getElementById(
-          "appCard"
-        );
-
-
+      const card = document.getElementById("appCard");
       card.innerHTML = `
-
-        <span
-          class="icon"
-          aria-hidden="true"
-        >
-          ⏳
-        </span>
-
-
-        <h2>
-
-          دارم انتخابت رو ثبت می‌کنم...
-
-        </h2>
-
+        <span class="icon" aria-hidden="true">⏳</span>
+        <h2>دارم انتخابت رو ثبت می‌کنم...</h2>
       `;
-
     }
 
-
-
-    /*
-    ==========================================
-    شروع سایت
-    ==========================================
-    */
-
     showStep1();
-
   </script>
-
 </body>
 
 </html>
